@@ -1,0 +1,81 @@
+Voetgangersroute1 Sjaan :
+52.012742 4.706400
+52.013177, 4.707190 nieuwe haven 
+52.013550, 4.706611 Hof van Tams / regentesseplantsoen
+52.014038, 4.707394 regentesseplantsoen/ vrouwenveststeeg
+52.013552, 4.707961 nieuwe haven /vrouwesteeg
+52.012907, 4.708376 museumtuin wanneer geopend
+52.012325, 4.708887 blauwstraat naaiersstraat
+
+Uibreiding Voetgangersroute
+
+52.010541, 4.707591 ingang lombardsteeg vanaf lange groenendaal
+52.010102, 4.708146 lombardsteeg /achter de vismarkt
+52.010281, 4.708479 ingang  achter de vismarkt/vissteeg
+52.009895, 4.709136 visbanken
+52.010519, 4.710171 ing bank /wijdstraat
+
+Kerkelijk historische route
+52.011181, 4.710057
+52.011300, 4.709005 naaiersstraat 1
+52.012423, 4.708801 turfmarkt op
+52.011624, 4.707085 evangelische gemeente + leger des heils
+52.010991, 4.705801 rechtsaf lage gouwe op
+52.011473, 4.704954 de morgenstond
+52.011737, 4.704471 brug over de gouwe
+52.011552, 4.704192 rechtsaf de hoge gouwe op
+52.010661, 4.705785 christelijk gereformeerde kerk
+52.010087, 4.706634 oud katholieke kerk
+52.010130, 4.706945 evangelisch lutherse gemeente en federatie gouda
+52.009729, 4.707178 hoge gouwe /aaltje bakstraat
+52.009187, 4.706346 vlamingstraat/raam
+52.008416, 4.708141 moskee
+52.007807, 4.709710 raam / kuipersstraat
+52.008052, 4.710120 sint barbarakapel/keizersstraat
+52.009301, 4.708232 schuilkerk
+52.009382, 4.708203 keizersstraat / hoge gouwe
+52.009461, 4.708707 Gouwekerk
+52.010273, 4.710107 Westhaven/Hoge gouwe
+52.010389, 4.709987 lage gouwe
+52.010555, 4.710313 torenstraat
+52.010608, 4.710565 achter de kerk
+52.010493, 4.711800 sint janskerk
+52.010552, 4.712975 vroesenplein / spieringstraat  /synagoge  en weeshuis(?)
+52.009180, 4.713562 walestraat / lange noodgodstraat 
+52.008160, 4.714096 moskee elfath
+52.008062, 4.714139 spieringstraat / vijverstraat
+52.007796, 4.713262 minderbroedersteeg / oosthaven
+52.007276, 4.713809 oosthaven / steegje
+52.007593, 4.714898 molen trappetje af naar Houtmanplantsoen (begaanbare trap?)
+52.007512, 4.715340 houtmanplantsoen
+52.009409, 4.715407 houtmanplantsoen doelenstraat
+52.009283, 4.714409 doelenstraat / groeneweg
+52.010305, 4.713970 swanenburgshofje
+52.010510, 4.713913 mannenhuis
+52.011836, 4.713672 groeneweg lange tiendeweg
+52.011491, 4.712800 lange tiendeweg / zeugstraat
+52.012025, 4.712269 zeugstraat  /stoofsteef 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
