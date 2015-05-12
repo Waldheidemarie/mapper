@@ -65,129 +65,129 @@ private static String DEFAULTURL = "http://i59.tinypic.com/10i6hw2.jpg";
 				new LatLng(52.009486, 4.708820),
 				new LatLng(52.009748, 4.709319),
 				new LatLng(52.009844, 4.709505), // hoge gouwe / peperstraat
-				new LatLng(52.009944, 4.709651),
-				new LatLng(52.010015, 4.709755),
-				new LatLng(52.010085, 4.709857),
-				new LatLng(52.010260, 4.710109),// hoge gouwe / westhaven
-				new LatLng(52.010395, 4.709998),
-				new LatLng(52.010511, 4.710163),
-				new LatLng(52.010551, 4.710314),
-				new LatLng(52.010608, 4.710563), // torenstraat / achter de kerk
-				new LatLng(52.010487, 4.710794),
-				new LatLng(52.010465, 4.710982),
-				new LatLng(52.010442, 4.711179),
-				new LatLng(52.010454, 4.711433),
-				new LatLng(52.010476, 4.711698),
-				new LatLng(52.010515, 4.711887),
-				new LatLng(52.010575, 4.712127),
-				new LatLng(52.010622, 4.712325),
-				new LatLng(52.010586, 4.712714),
-				new LatLng(52.010536, 4.712976),// molenwerf / spieringstraat
-				new LatLng(52.010341, 4.713053),
-				new LatLng(52.010049, 4.713163),
-				new LatLng(52.009813, 4.713252),
-				new LatLng(52.009636, 4.713334),
-				new LatLng(52.009481, 4.713409),
-				new LatLng(52.009175, 4.713554), //spieringstraat / lange noodgodstraat
-				new LatLng(52.008964, 4.713668),
-				new LatLng(52.008656, 4.713836),
-				new LatLng(52.008405, 4.713974),
-				new LatLng(52.008058, 4.714145),// spieringstraat/ minderbroedersteeg
-				new LatLng(52.007942, 4.713769),
-				new LatLng(52.007786, 4.713265),
-				new LatLng(52.007507, 4.713565),
-				new LatLng(52.007281, 4.713811),// oosthaven / punt
-				new LatLng(52.007310, 4.714261),
-				new LatLng(52.007338, 4.714703),// punt / molen
-				new LatLng(52.007447, 4.714728),
-				new LatLng(52.007486, 4.714859),
-				new LatLng(52.007586, 4.714896),
-				new LatLng(52.007514, 4.715341),
-				new LatLng(52.007935, 4.715539),
-				new LatLng(52.007963, 4.715466),
-				new LatLng(52.008166, 4.715404),
-				new LatLng(52.008485, 4.715500),
-				new LatLng(52.008720, 4.715570),
-				new LatLng(52.008887, 4.715484),
-				new LatLng(52.009068, 4.715391),
-				new LatLng(52.009406, 4.715404),// houtmanplantsoen / doelenstraat
-				new LatLng(52.009330, 4.714800),
-				new LatLng(52.009278, 4.714399),// doelenstraat / groeneweg
-				new LatLng(52.009500, 4.714301),
-				new LatLng(52.009581, 4.714246),
-				new LatLng(52.009810, 4.714130),
-				new LatLng(52.010050, 4.714040),
-				new LatLng(52.010291, 4.713965),
-				new LatLng(52.010556, 4.713899),
-				new LatLng(52.010680, 4.713866),
-				new LatLng(52.010775, 4.713829),
-				new LatLng(52.010884, 4.713798),
-				new LatLng(52.011040, 4.713764),
-				new LatLng(52.011285, 4.713740),
-				new LatLng(52.011367, 4.713727),
-				new LatLng(52.011529, 4.713693),
-				new LatLng(52.011609, 4.713672),
-				new LatLng(52.011724, 4.713643),
-				new LatLng(52.011779, 4.713644),
-				new LatLng(52.011842, 4.713670),// groeneweg / lange tiendeweg
-				new LatLng(52.011791, 4.713598),
-				new LatLng(52.011699, 4.713417),
-				new LatLng(52.011636, 4.713240),
-				new LatLng(52.011497, 4.712799),//lange tiendeweg / zeugstraat
-				new LatLng(52.011742, 4.712551),
-				new LatLng(52.011898, 4.712395),
-				new LatLng(52.012031, 4.712262),//zeugstraat / stoofsteeg
-				new LatLng(52.011700, 4.711578),
-				new LatLng(52.011723, 4.711408)
+				new LatLng(52.009735, 4.709706),
+				new LatLng(52.009625, 4.709901),
+				new LatLng(52.009498, 4.710132),
+				new LatLng(52.009359, 4.710385),
+				new LatLng(52.009034, 4.710744),
+				new LatLng(52.008869, 4.710915),
+				new LatLng(52.008696, 4.711062),
+				new LatLng(52.008557, 4.711180),//Peperstraat / Kuiperstraat
+				new LatLng(52.008242, 4.711463),
+				new LatLng(52.007942, 4.711731),
+				new LatLng(52.007791, 4.711899),
+				new LatLng(52.007687, 4.712025),
+				new LatLng(52.007476, 4.712245),
+				new LatLng(52.007383, 4.712341),
+				new LatLng(52.007190, 4.712482),
+				new LatLng(52.007047, 4.712593),//Peperstraat / Veerstal
+				new LatLng(52.007083, 4.712919),
+				new LatLng(52.007124, 4.713261),
+				new LatLng(52.007134, 4.713351), //Veerstal / Westhaven
+				new LatLng(52.006983, 4.713386), //Westhaven / Nieuwe Veerstal
+				new LatLng(52.007043, 4.713737),
+				new LatLng(52.007081, 4.713974), //Nieuwe Veerstal / Oosthaven
+				new LatLng(52.007168, 4.713903),
+				new LatLng(52.007284, 4.713806), //Oosthaven / Punt
+				new LatLng(52.007315, 4.714353),
+				new LatLng(52.007339, 4.714689),
+				new LatLng(52.007402, 4.714715),
+				new LatLng(52.007455, 4.714760),
+				new LatLng(52.007490, 4.714878),
+				new LatLng(52.007581, 4.714935),//Houtmanplantsoen
+				new LatLng(52.007607, 4.714643),
+				new LatLng(52.007753, 4.714281),
+				new LatLng(52.008059, 4.714145),//Spieringstraat / Vijverstraat				
+				new LatLng(52.008278, 4.714035),
+				new LatLng(52.008391, 4.713981),
+				new LatLng(52.008540, 4.713900),
+				new LatLng(52.008844, 4.713733),
+				new LatLng(52.009174, 4.713554),// Spieringstraat / Walestraat
+				new LatLng(52.009198, 4.713745),
+				new LatLng(52.009236, 4.714062),
+				new LatLng(52.009276, 4.714401),//Walestraat / Groeneweg
+				new LatLng(52.009451, 4.714324),
+				new LatLng(52.009501, 4.714302),
+				new LatLng(52.009591, 4.714240),
+				new LatLng(52.009714, 4.714175),
+				new LatLng(52.009900, 4.714092),
+				new LatLng(52.010158, 4.714007),
+				new LatLng(52.010402, 4.713937),
+				new LatLng(52.010563, 4.713897),
+				new LatLng(52.010680, 4.713867),
+				new LatLng(52.010774, 4.713833),
+				new LatLng(52.011048, 4.713764),
+				new LatLng(52.011144, 4.713750),//Groeneweg / Wallenbergplantsoen
+				new LatLng(52.011100, 4.713358),
+				new LatLng(52.011017, 4.712875),//Wallenbergplantsoen / Jeruzalemstraat
+				new LatLng(52.010786, 4.712914),
+				new LatLng(52.010630, 4.712941),
+				new LatLng(52.010536, 4.712978),
+				new LatLng(52.010576, 4.712790),
+				new LatLng(52.010623, 4.712328),
+				new LatLng(52.010525, 4.711926),
+				new LatLng(52.010474, 4.711690),
+				new LatLng(52.010443, 4.711187),
+				new LatLng(52.010488, 4.710795),
+				new LatLng(52.010608, 4.710564),
+				new LatLng(52.010730, 4.710490),
+				new LatLng(52.010823, 4.710499),
+				new LatLng(52.010904, 4.710571),
+				new LatLng(52.011008, 4.710444),
+				new LatLng(52.011114, 4.710320)
+				
 			}; 
 	
 //pins for interesting point along the route	
-	private final static MarkerObject m1 = new MarkerObject(0, new LatLng(52.011545, 4.710527), R.drawable.number1,
+	private final static MarkerObject m1 = new MarkerObject(0, new LatLng(52.011545, 4.710527), R.drawable.number1,//Stadhuis
 			R.drawable.number1green, "http://i59.tinypic.com/10i6hw2.jpg", R.string.infotext1);
-	private final static MarkerObject m2 = new MarkerObject(1, new LatLng(52.011290, 4.709551), R.drawable.number2,
+	private final static MarkerObject m2 = new MarkerObject(1, new LatLng(52.011290, 4.709551), R.drawable.number2,//Korte Groenendaal
 			R.drawable.number2green, "http://i62.tinypic.com/tapr89.jpg", R.string.infotext2);
-	private final static MarkerObject m3 = new MarkerObject(2, new LatLng(52.011070, 4.708527), R.drawable.number3,
+	private final static MarkerObject m3 = new MarkerObject(2, new LatLng(52.011965, 4.708898), R.drawable.number3,//Steenhouwersgildehuisje
 			R.drawable.number3green, "http://i57.tinypic.com/2nulxrp.jpg", R.string.infotext3);
-	private final static MarkerObject m4 = new MarkerObject(3, new LatLng(52.011467, 4.707139), R.drawable.number4,
+	private final static MarkerObject m4 = new MarkerObject(3, new LatLng(52.011467, 4.707139), R.drawable.number4,//Synagoge
 			R.drawable.number4green, "http://i60.tinypic.com/2445dlg.jpg", R.string.infotext11);
-	private final static MarkerObject m5 = new MarkerObject(4, new LatLng(52.011467, 4.705071), R.drawable.number5,
+	private final static MarkerObject m5 = new MarkerObject(4, new LatLng(52.011467, 4.705071), R.drawable.number5,//Pinkstergemeente
 			R.drawable.number5green, "http://i58.tinypic.com/120ou3s.jpg", R.string.infotext12);
-	private final static MarkerObject m6 = new MarkerObject(5, new LatLng(52.010635, 4.705704), R.drawable.number6,
+	private final static MarkerObject m6 = new MarkerObject(5, new LatLng(52.010635, 4.705704), R.drawable.number6,//Christelijk Gereformeerden
 			R.drawable.number6green, "http://i59.tinypic.com/6em136.jpg", R.string.infotext13);
-	private final static MarkerObject m7 = new MarkerObject(6, new LatLng(52.010134, 4.706439), R.drawable.number7,
+	private final static MarkerObject m7 = new MarkerObject(6, new LatLng(52.010134, 4.706439), R.drawable.number7,//Oudkatholieke kerk
 			R.drawable.number7green, "http://i57.tinypic.com/ogxrba.jpg", R.string.infotext14);
-	private final static MarkerObject m8 = new MarkerObject(7, new LatLng(52.010127, 4.707001), R.drawable.number8,
+	private final static MarkerObject m8 = new MarkerObject(7, new LatLng(52.010127, 4.707001), R.drawable.number8,//St Joostkapel
 			R.drawable.number8green, "http://i58.tinypic.com/n3s2ac.jpg", R.string.infotext15);
-	private final static MarkerObject m9 = new MarkerObject(8, new LatLng(52.008390, 4.708111), R.drawable.number9,
+	private final static MarkerObject m9 = new MarkerObject(8, new LatLng(52.008390, 4.708111), R.drawable.number9,//Moskee
 			R.drawable.number9green, "http://i61.tinypic.com/2q9cnpd.jpg", R.string.infotext16);
-	private final static MarkerObject m10 = new MarkerObject(9, new LatLng(52.007952, 4.709839), R.drawable.number10,
+	private final static MarkerObject m10 = new MarkerObject(9, new LatLng(52.007952, 4.709839), R.drawable.number10,//BarabaraKapel
 			R.drawable.number10green, "http://i58.tinypic.com/nlvp52.jpg", R.string.infotext17);
-	private final static MarkerObject m11 = new MarkerObject(10, new LatLng(52.009303, 4.708153), R.drawable.number11,
+	private final static MarkerObject m11 = new MarkerObject(10, new LatLng(52.009303, 4.708153), R.drawable.number11,//Remonstrantse kerk
 			R.drawable.number11green, "http://i57.tinypic.com/2e2krax.jpg", R.string.infotext18);
-	private final static MarkerObject m12 = new MarkerObject(11, new LatLng(52.009233, 4.708974), R.drawable.number12,
+	private final static MarkerObject m12 = new MarkerObject(11, new LatLng(52.009233, 4.708974), R.drawable.number12,//Gouwekerk
 			R.drawable.number12green, "http://i58.tinypic.com/10fn779.jpg", R.string.infotext19);
-	private final static MarkerObject m13 = new MarkerObject(12, new LatLng(52.010091, 4.710931), R.drawable.number13,
-			R.drawable.number13green, "http://i58.tinypic.com/257lqg3.jpg", R.string.infotext20);
-	private final static MarkerObject m14 = new MarkerObject(13, new LatLng(52.010648, 4.711025), R.drawable.number14,
-			R.drawable.number14green, "http://i61.tinypic.com/2qi4jdc.jpg", R.string.infotext21);
-	private final static MarkerObject m15 = new MarkerObject(14, new LatLng(52.010732, 4.713026), R.drawable.number15,
-			R.drawable.number15green, "http://i58.tinypic.com/292tjwg.jpg", R.string.infotext22);
-	private final static MarkerObject m16 = new MarkerObject(15, new LatLng(52.008146, 4.714005), R.drawable.number16,
-			R.drawable.number16green, "http://i59.tinypic.com/xn4zuw.jpg", R.string.infotext23);
-	private final static MarkerObject m17 = new MarkerObject(16, new LatLng(52.007525, 4.712134), R.drawable.number17,
-			R.drawable.number17green, "http://i59.tinypic.com/2148kfk.jpg", R.string.infotext24);
-	private final static MarkerObject m18 = new MarkerObject(17, new LatLng(52.007156, 4.713524), R.drawable.number18,
-			R.drawable.number18green, "http://i60.tinypic.com/vhxbg0.jpg", R.string.infotext25);
-	private final static MarkerObject m19 = new MarkerObject(18, new LatLng(52.007313, 4.714229), R.drawable.number19,
-			R.drawable.number19green, "http://i60.tinypic.com/t9gn5u.jpg", R.string.infotext26);
-	private final static MarkerObject m20 = new MarkerObject(19, new LatLng(52.007322, 4.714959), R.drawable.number20,
-			R.drawable.number20green, "http://i62.tinypic.com/w0qqgj.jpg", R.string.infotext27);
-	private final static MarkerObject m21 = new MarkerObject(20, new LatLng(52.007729, 4.715173), R.drawable.number21,
-			R.drawable.number21green, "http://i61.tinypic.com/y0vu0.jpg", R.string.infotext28);
-	private final static MarkerObject m22 = new MarkerObject(21, new LatLng(52.010293, 4.713781), R.drawable.number22,
-			R.drawable.number22green, "http://i58.tinypic.com/11jxmap.jpg", R.string.infotext29);
-	private final static MarkerObject m23 = new MarkerObject(22, new LatLng(52.010538, 4.713941), R.drawable.number23,
-			R.drawable.number23green, "http://i60.tinypic.com/2wmjmrp.jpg", R.string.infotext30);
+	private final static MarkerObject m13 = new MarkerObject(12, new LatLng(52.009422, 4.710150), R.drawable.number13,//Vergadering der gelovigen
+			R.drawable.number13green, "http://i58.tinypic.com/2z7q39l.jpg", R.string.infotext235);
+	
+	private final static MarkerObject m14 = new MarkerObject(13, new LatLng(52.007525, 4.712134), R.drawable.number14,//armenkerk
+			R.drawable.number14green, "http://i59.tinypic.com/2148kfk.jpg", R.string.infotext24);
+	private final static MarkerObject m15 = new MarkerObject(14, new LatLng(52.007156, 4.713524), R.drawable.number15,//tolhuis
+			R.drawable.number15green, "http://i60.tinypic.com/vhxbg0.jpg", R.string.infotext25);
+	private final static MarkerObject m16 = new MarkerObject(15, new LatLng(52.007313, 4.714229), R.drawable.number16,//volmolen
+			R.drawable.number16green, "http://i60.tinypic.com/t9gn5u.jpg", R.string.infotext26);
+	private final static MarkerObject m17 = new MarkerObject(16, new LatLng(52.007322, 4.714959), R.drawable.number17,//kasteel
+			R.drawable.number17green, "http://i62.tinypic.com/w0qqgj.jpg", R.string.infotext27);
+	private final static MarkerObject m18 = new MarkerObject(17, new LatLng(52.007729, 4.715173), R.drawable.number18,//park
+			R.drawable.number18green, "http://i61.tinypic.com/y0vu0.jpg", R.string.infotext28);
+	private final static MarkerObject m19 = new MarkerObject(18, new LatLng(52.008146, 4.714005), R.drawable.number19,//Moskee
+			R.drawable.number19green, "http://i59.tinypic.com/xn4zuw.jpg", R.string.infotext23);
+	private final static MarkerObject m20 = new MarkerObject(19, new LatLng(52.010293, 4.713781), R.drawable.number20,//Swanenburg
+			R.drawable.number20green, "http://i58.tinypic.com/11jxmap.jpg", R.string.infotext29);
+	private final static MarkerObject m21 = new MarkerObject(20, new LatLng(52.010538, 4.713941), R.drawable.number21,//Huize Groeneweg
+			R.drawable.number21green, "http://i60.tinypic.com/2wmjmrp.jpg", R.string.infotext30);
+	private final static MarkerObject m22 = new MarkerObject(21, new LatLng(52.010732, 4.713026), R.drawable.number22,//Jeruzalemkapel
+			R.drawable.number22green, "http://i58.tinypic.com/292tjwg.jpg", R.string.infotext22);
+	private final static MarkerObject m23 = new MarkerObject(22, new LatLng(52.010091, 4.710931), R.drawable.number23,//Gasthuiskapel
+			R.drawable.number23green, "http://i58.tinypic.com/257lqg3.jpg", R.string.infotext20);
+	private final static MarkerObject m24 = new MarkerObject(23, new LatLng(52.010648, 4.711025), R.drawable.number24,//St Jan
+			R.drawable.number24green, "http://i61.tinypic.com/2qi4jdc.jpg", R.string.infotext21);
 	
 	
 	
@@ -197,9 +197,7 @@ private static String DEFAULTURL = "http://i59.tinypic.com/10i6hw2.jpg";
 	
 	
 	
-	
-	
-	public MarkerObject[] markerobjects = { m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22,  m23 };
+	public MarkerObject[] markerobjects = { m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22,  m23, m24 };
 	public ArrayList<LatLng> locationsForPolyline;
 	
 	public static int DEFAULTZOOMLEVEL = 15;
