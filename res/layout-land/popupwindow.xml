@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:paddingLeft="5dp"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:paddingRight="5dp"
+    android:paddingLeft="3dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:paddingRight="3dp"
     
      >
 
@@ -38,7 +38,7 @@
                 android:id="@+id/buttonpreviousitem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="6"
                 android:src="@drawable/ic_action_previous_item" />
 
@@ -46,7 +46,7 @@
                 android:id="@+id/buttonshowpicture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="6"
                 android:src="@drawable/ic_action_picture" />
 
@@ -54,7 +54,7 @@
                 android:id="@+id/buttonshowtext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="6"
                 android:src="@drawable/ic_action_about" />
 
@@ -62,7 +62,7 @@
                 android:id="@+id/buttonnextitem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="6"
                 android:src="@drawable/ic_action_next_item" />
         </LinearLayout>
@@ -71,12 +71,12 @@
       
     <ScrollView
         android:id="@+id/scrollview1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end"
+        android:fillViewport="true"
         android:background="@drawable/background_popup"
         android:padding="5dp"
-        
          >
 
         <TextView

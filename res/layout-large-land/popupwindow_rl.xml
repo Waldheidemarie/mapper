@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="480dp"
+        android:layout_height="360dp"
+        android:layout_gravity="start"
+        android:adjustViewBounds="true"
+        android:paddingRight="10dp"
+        android:src="@drawable/placeholder" />
+
+    <ScrollView
+        android:id="@+id/scrollview1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/imageview1"
+        android:background="@drawable/background_popup"
+        android:gravity="right"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholderstring"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/Snow" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearlayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview1"
+        android:layout_toLeftOf="@+id/scrollview1"
+        android:orientation="horizontal" >
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/buttonpreviousitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/buttonshowpicture"
+        android:layout_weight="6"
+        android:src="@drawable/ic_action_previous_item" />
+
+    <ImageView
+        android:id="@+id/buttonnextitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/scrollview1"
+        android:layout_alignRight="@+id/linearlayout3"
+        android:layout_marginRight="42dp"
+        android:layout_weight="6"
+        android:src="@drawable/ic_action_next_item" />
+
+    <ImageView
+        android:id="@+id/buttonshowpicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonnextitem"
+        android:layout_marginRight="23dp"
+        android:layout_toLeftOf="@+id/buttonnextitem"
+        android:layout_weight="6"
+        android:src="@drawable/ic_action_picture" />
+
+    <ImageView
+        android:id="@+id/buttonshowtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonshowpicture"
+        android:layout_toLeftOf="@+id/buttonshowpicture"
+        android:layout_weight="6"
+        android:src="@drawable/ic_action_about" />
+
+</RelativeLayout>

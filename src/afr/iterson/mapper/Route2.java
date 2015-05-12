@@ -1,14 +1,20 @@
 package afr.iterson.mapper;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
+import android.location.Location;
+
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class Route2 extends Route
 {
 
+private static String DEFAULTURL = "http://i59.tinypic.com/10i6hw2.jpg";	
+	
 //pins for the polyline drawing the actual route	
-	private final  LatLng[] locationsPolyline =
+	private final static  LatLng[] locationsPolyline =
 			{ 
 				new LatLng(52.011496, 4.710373),
 				new LatLng(52.011495, 4.710042),
@@ -141,25 +147,59 @@ public class Route2 extends Route
 	private final static MarkerObject m2 = new MarkerObject(1, new LatLng(52.011290, 4.709551), R.drawable.number2,
 			R.drawable.number2green, "http://i62.tinypic.com/tapr89.jpg", R.string.infotext2);
 	private final static MarkerObject m3 = new MarkerObject(2, new LatLng(52.011070, 4.708527), R.drawable.number3,
-			R.drawable.number3green, "http://i60.tinypic.com/oaskrs.jpg", R.string.infotext3);
-	private final static MarkerObject m4 = new MarkerObject(3, new LatLng(52.010822, 4.708310), R.drawable.number4,
-			R.drawable.number4green, "http://i61.tinypic.com/a3019h.jpg", R.string.infotext4);
-	private final static MarkerObject m5 = new MarkerObject(4, new LatLng(52.011326, 4.707886), R.drawable.number5,
-			R.drawable.number5green, "http://i59.tinypic.com/15f4qa0.jpg", R.string.infotext5);
-	private final static MarkerObject m6 = new MarkerObject(5, new LatLng(52.011787, 4.707567), R.drawable.number6,
-			R.drawable.number6green, "http://i61.tinypic.com/xqhow3.jpg", R.string.infotext6);
-	private final static MarkerObject m7 = new MarkerObject(6, new LatLng(52.012105, 4.708080), R.drawable.number7,
-			R.drawable.number7green, "http://i61.tinypic.com/2pra44m.jpg", R.string.infotext7);
-	private final static MarkerObject m8 = new MarkerObject(7, new LatLng(52.012719, 4.709286), R.drawable.number8,
-			R.drawable.number8green, "http://i57.tinypic.com/2jadrmq.jpg", R.string.infotext8);
-	private final static MarkerObject m9 = new MarkerObject(8, new LatLng(52.012537, 4.710107), R.drawable.number9,
-			R.drawable.number9green, "http://i58.tinypic.com/33p537s.jpg", R.string.infotext9);
-	private final static MarkerObject m10 = new MarkerObject(9, new LatLng(52.012264, 4.710251), R.drawable.number10,
-			R.drawable.number10green, "http://i60.tinypic.com/nq388x.jpg", R.string.infotext10);
-	private final static MarkerObject m11 = new MarkerObject(10, new LatLng(52.012332, 4.710883), R.drawable.number11,
-			R.drawable.number11green, "http://i60.tinypic.com/27wx8g9.jpg", R.string.infotext11);
-
-	public MarkerObject[] markerobjects = { m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11 };
+			R.drawable.number3green, "http://i57.tinypic.com/2nulxrp.jpg", R.string.infotext3);
+	private final static MarkerObject m4 = new MarkerObject(3, new LatLng(52.011467, 4.707139), R.drawable.number4,
+			R.drawable.number4green, "http://i60.tinypic.com/2445dlg.jpg", R.string.infotext11);
+	private final static MarkerObject m5 = new MarkerObject(4, new LatLng(52.011467, 4.705071), R.drawable.number5,
+			R.drawable.number5green, "http://i58.tinypic.com/120ou3s.jpg", R.string.infotext12);
+	private final static MarkerObject m6 = new MarkerObject(5, new LatLng(52.010635, 4.705704), R.drawable.number6,
+			R.drawable.number6green, "http://i59.tinypic.com/6em136.jpg", R.string.infotext13);
+	private final static MarkerObject m7 = new MarkerObject(6, new LatLng(52.010134, 4.706439), R.drawable.number7,
+			R.drawable.number7green, "http://i57.tinypic.com/ogxrba.jpg", R.string.infotext14);
+	private final static MarkerObject m8 = new MarkerObject(7, new LatLng(52.010127, 4.707001), R.drawable.number8,
+			R.drawable.number8green, "http://i58.tinypic.com/n3s2ac.jpg", R.string.infotext15);
+	private final static MarkerObject m9 = new MarkerObject(8, new LatLng(52.008390, 4.708111), R.drawable.number9,
+			R.drawable.number9green, "http://i61.tinypic.com/2q9cnpd.jpg", R.string.infotext16);
+	private final static MarkerObject m10 = new MarkerObject(9, new LatLng(52.007952, 4.709839), R.drawable.number10,
+			R.drawable.number10green, "http://i58.tinypic.com/nlvp52.jpg", R.string.infotext17);
+	private final static MarkerObject m11 = new MarkerObject(10, new LatLng(52.009303, 4.708153), R.drawable.number11,
+			R.drawable.number11green, "http://i57.tinypic.com/2e2krax.jpg", R.string.infotext18);
+	private final static MarkerObject m12 = new MarkerObject(11, new LatLng(52.009233, 4.708974), R.drawable.number12,
+			R.drawable.number12green, "http://i58.tinypic.com/10fn779.jpg", R.string.infotext19);
+	private final static MarkerObject m13 = new MarkerObject(12, new LatLng(52.010091, 4.710931), R.drawable.number13,
+			R.drawable.number13green, "http://i58.tinypic.com/257lqg3.jpg", R.string.infotext20);
+	private final static MarkerObject m14 = new MarkerObject(13, new LatLng(52.010648, 4.711025), R.drawable.number14,
+			R.drawable.number14green, "http://i61.tinypic.com/2qi4jdc.jpg", R.string.infotext21);
+	private final static MarkerObject m15 = new MarkerObject(14, new LatLng(52.010732, 4.713026), R.drawable.number15,
+			R.drawable.number15green, "http://i58.tinypic.com/292tjwg.jpg", R.string.infotext22);
+	private final static MarkerObject m16 = new MarkerObject(15, new LatLng(52.008146, 4.714005), R.drawable.number16,
+			R.drawable.number16green, "http://i59.tinypic.com/xn4zuw.jpg", R.string.infotext23);
+	private final static MarkerObject m17 = new MarkerObject(16, new LatLng(52.007525, 4.712134), R.drawable.number17,
+			R.drawable.number17green, "http://i59.tinypic.com/2148kfk.jpg", R.string.infotext24);
+	private final static MarkerObject m18 = new MarkerObject(17, new LatLng(52.007156, 4.713524), R.drawable.number18,
+			R.drawable.number18green, "http://i60.tinypic.com/vhxbg0.jpg", R.string.infotext25);
+	private final static MarkerObject m19 = new MarkerObject(18, new LatLng(52.007313, 4.714229), R.drawable.number19,
+			R.drawable.number19green, "http://i60.tinypic.com/t9gn5u.jpg", R.string.infotext26);
+	private final static MarkerObject m20 = new MarkerObject(19, new LatLng(52.007322, 4.714959), R.drawable.number20,
+			R.drawable.number20green, "http://i62.tinypic.com/w0qqgj.jpg", R.string.infotext27);
+	private final static MarkerObject m21 = new MarkerObject(20, new LatLng(52.007729, 4.715173), R.drawable.number21,
+			R.drawable.number21green, "http://i61.tinypic.com/y0vu0.jpg", R.string.infotext28);
+	private final static MarkerObject m22 = new MarkerObject(21, new LatLng(52.010293, 4.713781), R.drawable.number22,
+			R.drawable.number22green, "http://i58.tinypic.com/11jxmap.jpg", R.string.infotext29);
+	private final static MarkerObject m23 = new MarkerObject(22, new LatLng(52.010538, 4.713941), R.drawable.number23,
+			R.drawable.number23green, "http://i60.tinypic.com/2wmjmrp.jpg", R.string.infotext30);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public MarkerObject[] markerobjects = { m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22,  m23 };
 	public ArrayList<LatLng> locationsForPolyline;
 	
 	public static int DEFAULTZOOMLEVEL = 15;
@@ -176,6 +216,42 @@ public class Route2 extends Route
 		}
 	}
 
+	public static double calculateDistance()
+	{
+		PolylineOptions routedrawing = new PolylineOptions();
+		for(LatLng l : locationsPolyline)
+		{
+			routedrawing.add(l);
+		}
+		
+		float totalDistance = 0;
+
+		for (int i = 1; i < routedrawing.getPoints().size(); i++)
+		{
+			Location currLocation = new Location("this");
+			currLocation.setLatitude(routedrawing.getPoints().get(i).latitude);
+			currLocation.setLongitude(routedrawing.getPoints().get(i).longitude);
+
+			Location lastLocation = new Location("this");
+			currLocation.setLatitude(routedrawing.getPoints().get(i - 1).latitude);
+			currLocation.setLongitude(routedrawing.getPoints().get(i - 1).longitude);
+			totalDistance += lastLocation.distanceTo(currLocation);
+		}
+	
+		return round(totalDistance/1E8,1);
+	
+	}
+
+	
+	public static double round(double value, int places) {
+	    if (places < 0) throw new IllegalArgumentException();
+
+	    BigDecimal bd = new BigDecimal(value);
+	    bd = bd.setScale(1, BigDecimal.ROUND_HALF_UP);
+	    return bd.doubleValue();
+	}
+
+	
 	public MarkerObject[] getMarkerobjects()
 	{
 		return markerobjects;

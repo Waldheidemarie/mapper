@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="startpage_route1">Green route\n\n</string>
+	<string name="startpage_route1_subtitle">Narrow Alleys</string>
+	<string name="startpage_route2">Purple route\n\n</string>
+	<string name="startpage_route2_subtitle">Churches of Gouda</string>
+	<string name="startpage_distance">Distance: </string>
+	
+	<string name ="startpage_infotext"><![CDATA[<h2><font color = \'aqua\' ; >Gouda</font></h2><p>This app offers you walkabouts in Gouda\'s historical center. Watch the video for how to use this app.</p><p>In Hollands \"Randstad\" area the city of Gouda has 70,939 inhabitants on a surface of 19,92 km². It is a regional center within the \"Green Heart\", the part of the Randstad where we find more nature and agriculture. Gouda lies where the rivers \"Gouwe\" and \"Hollandse Ijssel\" merge. Thanks to inland shipping across these rivers Gouda grew to an important Dutch city during the middle-ages. The city acquired city-rights in 1272 and became Hollands 5th largest city. In the center we can still find a great number of historical and monumental buildings, of which the City Hall and the St John are probably the most famous. Besides that Gouda is renowned for its chees which is traded on thursdays touristic cheesemarket. Also the city is known for the manufacture of candles, pipes, syrup wafers and the yearly Candle-night. The green route offers you a short walk in the center and shows you a lot of small alleys and hidden places. The purple route guides you along Gouda\'s churches and places of worship.</p>]]></string>
+    
+    <string name="app_name">Gouda City Walk</string>
+    <string name="action_settings">Settings</string>
+    <string name="placeholderstring">Dit is het stadhuis van Gouda. Op de voorgevel zie je beelden van de graven van Holland, zij hebben destijds dit grote gebouw betaald en daar wilden ze wel een beeld voor terug #8230</string>
+    
+    
+    
+    
+    <string name="infotext_template"><![CDATA[<h2><font color = \'aqua\' ; >Title here </font></h2><p>headingtext</p><p>Further Text</p>]]></string>
+    <string name="infotext1"><![CDATA[<h2><font color = #00FFFF ; >Stadhuis</font></h2><p></p><p></p>]]></string>
+    <string name="infotext2"><![CDATA[<h2><font color = #00FF00 ; >Korte Groenendaal</font></h2><p></p>]]></string>
+    <string name="infotext3"><![CDATA[<h2><font color = #FFFF00 ; >Naaiersstraat: de vier Gekroonden</font></h2><p> </p>]]></string>
+    <string name="infotext4"><![CDATA[<h2><font color = #f0f8aa ; >Verzetsmuseum</font></h2><p></p>]]></string>
+    <string name="infotext5"><![CDATA[<h2><font color = #7FFFD4 ; >Vrouwentoren</font></h2><p></p>]]></string>
+    <string name="infotext6"><![CDATA[<h2><font color = #8FBC8F ; >Hof van Jansenius</font></h2><p></p>]]></string>
+    <string name="infotext7"><![CDATA[<h2><font color = #FF8C00 ; >Trappenbrug</font></h2><p> </p>]]></string>
+    <string name="infotext8"><![CDATA[<h2><font color = #6495ED ; >Looierspoort en Lange Groenendaal</font></h2><p></p>]]></string>
+    <string name="infotext9"><![CDATA[<h2><font color = #C0C0C0 ; >Visbanken</font></h2><p></p>]]></string>
+    <string name="infotext10"><![CDATA[<h2><font color = #FFFF00 ; >Donkere Sluis en Wijdstraat</font></h2><p></p>]]></string>
+    <string name="infotext11"><![CDATA[<h2><font color = #F5F5F5 ; >Synagoge</font></h2><p></p>]]></string>
+    <string name="infotext12"><![CDATA[<h2><font color = #40E0D0 ; >De Morgenstond</font></h2><p></p>]]></string>
+    <string name="infotext13"><![CDATA[<h2><font color = #D8BFD8 ; >Christelijk Gereformeerde Kerk</font></h2><p></p>]]></string>
+    <string name="infotext14"><![CDATA[<h2><font color = #B0E0E6 ; >Oud katholieke kerk</font></h2><p></p>]]></string>
+    <string name="infotext15"><![CDATA[<h2><font color = #87CEEB ; >Sint Joostkapel</font></h2><p></p>]]></string>
+    <string name="infotext16"><![CDATA[<h2><font color = #FFC0CB ; >Moskee Nour</font></h2><p></p>]]></string>
+    <string name="infotext17"><![CDATA[<h2><font color = #00FFFF ; >Barbaratoren</font></h2><p></p>]]></string>
+    <string name="infotext18"><![CDATA[<h2><font color = #f0f8aa ; >Remonstrantse Kerk</font></h2><p></p>]]></string>
+    <string name="infotext19"><![CDATA[<h2><font color = #7FFFD4 ; >Gouwekerk </font></h2><p> </p>]]></string>
+    <string name="infotext20"><![CDATA[<h2><font color = #8FBC8F ; >Gasthuiskapel</font></h2><p></p>]]></string>
+    <string name="infotext21"><![CDATA[<h2><font color = #FF8C00 ; >St Janskerk</font></h2><p></p>]]></string>
+    <string name="infotext22"><![CDATA[<h2><font color = #6495ED ; >Jeruzalemkapel</font></h2><p></p>]]></string>
+    <string name="infotext23"><![CDATA[<h2><font color = #FF44AA ; >Moskee El-Fath</font></h2><p></p>]]></string>
+    <string name="infotext235"><![CDATA[<h2><font color = \'aqua\' ; >Vegadering der gelovigen</font></h2><p></p><p></p>]]></string>
+    <string name="infotext24"><![CDATA[<h2><font color = #FFFF00 ; >De Armenkerk</font></h2><p></p>]]></string>
+    <string name="infotext25"><![CDATA[<h2><font color = #98FB98 ; >Het Tolhuis</font></h2><p></p>]]></string>
+    <string name="infotext26"><![CDATA[<h2><font color = #FF4500 ; >De Volmolen</font></h2><p></p>]]></string>
+    <string name="infotext27"><![CDATA[<h2><font color = #FFDAB9 ; >Het kasteel en de molen.</font></h2><p></p>]]></string>
+    <string name="infotext28"><![CDATA[<h2><font color = #FFDAB9 ; >Houtmansplantsoen</font></h2><p></p>]]></string>
+    <string name="infotext29"><![CDATA[<h2><font color = #87CEEB ; >Swanenburgshofje</font></h2><p></p>]]></string>
+    <string name="infotext30"><![CDATA[<h2><font color = #FFDAB9 ; >Huize Groeneweg</font></h2><p></p>]]></string>
+   
+     <string name="infotext85"><![CDATA[<h2><font color = \'aqua\' ; >Let op! </font></h2><p></p>]]></string>
+
+</resources>

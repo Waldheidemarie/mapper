@@ -33,6 +33,8 @@ public class PopupFragment extends Fragment
 	DisplayImageOptions options;
 	public int markerid;
 	public DataTransfer datatransfer;
+	public LinearLayout mainlayout;
+	public LinearLayout buttonbarlayout;
 	public ImageView image;
 	public ScrollView scrollview;
 	//private ScrollView scrollview;
@@ -64,7 +66,7 @@ public class PopupFragment extends Fragment
 				.showImageForEmptyUri(R.drawable.ic_empty).showImageOnFail(R.drawable.ic_error).cacheInMemory(true)
 				.cacheOnDisk(true).considerExifParams(true).displayer(new RoundedVignetteBitmapDisplayer(20, 3))
 				.build();
-
+		setRetainInstance(true);
 		context = getActivity().getApplicationContext();
 		DisplayMetrics displaymetrics = new DisplayMetrics();
 		getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
@@ -82,7 +84,6 @@ public class PopupFragment extends Fragment
 		populateLayout(view);
 		image.setVisibility(View.INVISIBLE);
 		scrollview.setVisibility(View.INVISIBLE);
-		main.fragmentview = view;
 		return view;
 	}
 
@@ -102,16 +103,27 @@ public class PopupFragment extends Fragment
 	public void onViewCreated(View v, Bundle savedInstanceState)
 	{
 		super.onViewCreated(v, savedInstanceState);
+		
 
 	}
 
 	// The behavior of the buttonbar below, the main image and the infotext. The
 	// method retrieves the current selected marker
 	// and fetches the appropriate resources.
-
+	public void hideImages()
+	{
+		image.setVisibility(View.INVISIBLE);
+		scrollview.setVisibility(View.INVISIBLE);
+	}
+	
+	
 	public void populateLayout(View view)
 	{
 		MarkerObject m = ((MainActivity) getActivity()).markerobjects[main.getSelectedMarker()];
+		mainlayout = (LinearLayout)view.findViewById(R.id.linearlayout1);
+		buttonbarlayout = (LinearLayout)view.findViewById(R.id.linearlayout3);
+		
+		
 		ImageView buttonshowpicture = (ImageView)view.findViewById(R.id.buttonshowpicture);
 		changeColor(buttonshowpicture);
 		buttonshowpicture.setOnClickListener(new ButtonClickListener(2));
@@ -119,6 +131,7 @@ public class PopupFragment extends Fragment
 		
 		String helper1 = getResources().getString(m.getDescriptiontext());
 		scrollview = (ScrollView) view.findViewById(R.id.scrollview1);
+		scrollview.setFillViewport(true);
 		scrollview.setOnClickListener(new ButtonClickListener(6));
 		
 		Spanned sp = Html.fromHtml(getString(m.getDescriptiontext()));
@@ -175,6 +188,8 @@ public class PopupFragment extends Fragment
 				String text = getResources().getString(m.getDescriptiontext());
 				String url = m.getImageurl();
 				Spanned sp = Html.fromHtml(getString(m.getDescriptiontext()));
+				scrollview.requestLayout();
+				scrollview.setFillViewport(true);
 				tv1.setText((sp));
 				ImageLoader.getInstance().displayImage(url, image, options);
 
@@ -231,6 +246,8 @@ public class PopupFragment extends Fragment
 				MarkerObject m = ((MainActivity) getActivity()).markerobjects[markerid];
 				String url = m.getImageurl();
 				Spanned sp = Html.fromHtml(getString(m.getDescriptiontext()));
+				scrollview.requestLayout();
+				scrollview.setFillViewport(true);
 				tv1.setText((sp));
 				ImageLoader.getInstance().displayImage(url, image, options);
 				break;
@@ -263,12 +280,11 @@ public class PopupFragment extends Fragment
 		datatransfer.onDataPass(oldmarkerid, newmarkerid);
 	}
 
+	
 	public void setImageSize(ImageView imageview, ScrollView sv)
 	{
 		DisplayMetrics displaymetrics = new DisplayMetrics();
 		getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-		// screenwidth = main.mDisplayWidth;
-		// screenheight = main.mDisplayHeight;
 		screenorientation = getActivity().getResources().getConfiguration().orientation;
 		switch (screenorientation)
 		{
@@ -278,22 +294,51 @@ public class PopupFragment extends Fragment
 			int size = (screenwidth / 5) * 3 - 40;
 			imageview.getLayoutParams().width = (size);
 			imageview.getLayoutParams().height = ((size) / 4) * 3;
+			
+			buttonbarlayout.requestLayout();
+			buttonbarlayout.getLayoutParams().height = screenheight/5;
+			
 			LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,
-					LayoutParams.WRAP_CONTENT);
+					LayoutParams.MATCH_PARENT);
 			llp.gravity = Gravity.RIGHT;
 			sv.requestLayout();
-			sv.getLayoutParams().width = (screenwidth / 5) * 2 - 50;
-			sv.setPadding(20, 20, 20, 20);
+			sv.getLayoutParams().height = screenheight - 40;
+			sv.getLayoutParams().width = (screenwidth / 5) * 2 - 40;
+			sv.setPadding(15, 15, 15, 15);
+			sv.setFillViewport(true);
 			sv.setLayoutParams(llp);
+			
+			Log.i(TAG, "Landscape mode:   " + String.valueOf(screenwidth) + " x " + String.valueOf(screenheight));
+			Log.i(TAG, "MainLayout width:" + String.valueOf(mainlayout.getWidth())+ " MainLayoutHeight: "+String.valueOf(mainlayout.getHeight()));
+			Log.i(TAG, "Image width:     " + String.valueOf(imageview.getLayoutParams().width)+ " ImageHeight: "+String.valueOf(imageview.getLayoutParams().height));
+			Log.i(TAG, "Scrollview width:" + String.valueOf(sv.getWidth())+ " ScrollviewHeight: "+String.valueOf(sv.getHeight()));
+			Log.i(TAG, "ButtonBar width: " + String.valueOf(buttonbarlayout.getWidth())+ " ButtonbarHeight: "+String.valueOf(buttonbarlayout.getHeight()));
+		
 			break;
 		}
 
 		case Configuration.ORIENTATION_PORTRAIT:
 		{
 			imageview.requestLayout();
-			int size = screenwidth - 40;
+			int size = screenwidth - 35;
 			imageview.getLayoutParams().width = size;
 			imageview.getLayoutParams().height = (size / 4) * 3;
+			
+			buttonbarlayout.requestLayout();
+			buttonbarlayout.getLayoutParams().height = screenheight/9;
+			
+			sv.requestLayout();
+			sv.getLayoutParams().width = size-5;
+			sv.getLayoutParams().height = (screenheight/9)*8 - (size / 4) * 3;
+			sv.setFillViewport(true);
+			
+			
+			Log.d(TAG, "portrait mode:   " + String.valueOf(screenwidth) + " x " + String.valueOf(screenheight));
+			Log.d(TAG, "MainLayout width:" + String.valueOf(mainlayout.getWidth())+ " MainLayoutHeight: "+String.valueOf(mainlayout.getHeight()));
+			Log.d(TAG, "Image width:     " + String.valueOf(imageview.getLayoutParams().width)+ " ImageHeight: "+String.valueOf(imageview.getLayoutParams().height));
+			Log.d(TAG, "Scrollview width:" + String.valueOf(sv.getWidth())+ " ScrollviewHeight: "+String.valueOf(sv.getHeight()));
+			Log.d(TAG, "ButtonBar width: " + String.valueOf(buttonbarlayout.getWidth())+ " ButtonbarHeight: "+String.valueOf(buttonbarlayout.getHeight()));
+			
 			break;
 		}
 
@@ -309,13 +354,14 @@ public class PopupFragment extends Fragment
 	public void onConfigurationChanged(Configuration newConfig)
 	{
 		super.onConfigurationChanged(newConfig);
+		Log.i(TAG, "In PopupFragment onConfigurationChanged");
 		main.swapWidthAndHeight();
 		screenwidth = main.getmDisplayWidth();
 		screenheight = main.getmDisplayHeight();
-		LinearLayout linearlayout = (LinearLayout) getView().findViewById(R.id.linearlayout1);
-		linearlayout.removeAllViews();
-		linearlayout.addView(View.inflate(context, R.layout.popupwindow, null));
-		populateLayout(linearlayout);
+		mainlayout.removeAllViews();
+		mainlayout.addView(View.inflate(context, R.layout.popupwindow, null));
+		populateLayout(mainlayout);
+		hideImages();
 	}
 
 	@Override
