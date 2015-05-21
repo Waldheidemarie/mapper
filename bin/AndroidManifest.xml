@@ -29,7 +29,7 @@
     <application
         android:name="afr.iterson.mapper.Mapper"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/ic_app"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -47,7 +47,8 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDrfhTLPr4_Le89ZWhrtavhO8ZHe74DFI8" />
+            android:value="AIzaSyBw_QY2kxE20rhFWZ3XQvlQ8TuP4T4cSSo" />
     </application>
 
 </manifest>
+            <!--  android:value="AIzaSyDrfhTLPr4_Le89ZWhrtavhO8ZHe74DFI8" />debug key --> 

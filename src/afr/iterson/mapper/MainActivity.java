@@ -8,10 +8,8 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import afr.iterson.mapper.PopupFragment.DataTransfer;
-import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -20,7 +18,6 @@ import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -35,9 +32,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import com.nostra13.universalimageloader.core.display.RoundedVignetteBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 public class MainActivity extends LifecycleLoggingActivity implements DataTransfer, OnMapReadyCallback
@@ -82,7 +77,6 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 	public int mDisplayHeight;
 	Fragment fragment;
 	Fragment startupFragment;
-	private DisplayImageOptions options;
 	private int mSubstract;
 	private int mInitialOrientation;
 	private boolean mFirstload;
@@ -93,12 +87,7 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//context = getBaseContext();
 		markergroup = new HashMap<Integer, Marker>();
-		options = new DisplayImageOptions.Builder().showImageOnLoading(R.drawable.ic_stub)
-				.showImageForEmptyUri(R.drawable.ic_empty).showImageOnFail(R.drawable.ic_error).cacheInMemory(true)
-				.cacheOnDisk(true).considerExifParams(true).displayer(new RoundedVignetteBitmapDisplayer(20, 3))
-				.build();
 		startupFragment = new StartupFragment();
 		fragment = new PopupFragment();
 		fragment.setRetainInstance(true);
@@ -125,7 +114,7 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 	public void onBackPressed()
 	{
 		selectedmarker = 0;
-		oldselectedmarker = 0;
+		oldselectedmarker = 10;
 		addFragment(startupFragment, STARTSCREEN);
 	}
 
@@ -216,7 +205,17 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 			Log.i(TAG, "onWindowFocusChanged ");
 			// Get the size of the display so this View knows where borders are
 			setScreenDims();
-			
+			if(selectedmarker == 0 && oldselectedmarker == 0)
+			{
+				for (Entry<Integer, Marker> key : markergroup.entrySet())
+				{
+					if (key.getKey()==0)
+					{
+						Log.i(TAG, "onWindowFocusChanged changed icon");
+						key.getValue().setIcon(BitmapDescriptorFactory.fromResource(markerobjects[0].getIconresource2()));
+					}
+				}
+			}
 			// jumps straight to the map on the position where the user closed
 			// the application
 			if (startupFragment != null && STARTSCREEN_VISIBLE == false)
@@ -295,7 +294,6 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 			setROUTECOLOR(Route1.getDEFAULTROUTECOLOR());
 			markerobjects = route1.getMarkerobjects();
 			locations = route1.getLocationsForPolyline();
-			//setupMapIfNeeded();
 			if (!f.isAdded())
 			{
 				FragmentManager fm = getSupportFragmentManager();
@@ -317,7 +315,6 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 			setROUTECOLOR(Route2.getDEFAULTROUTECOLOR());
 			markerobjects = route2.getMarkerobjects();
 			locations = route2.getLocationsForPolyline();
-			//setupMapIfNeeded();
 			if (!f.isAdded())
 			{
 				FragmentManager fm = getSupportFragmentManager();
@@ -359,7 +356,6 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 				swapWidthAndHeight();
 			}
 		}
-		
 		//if saved from portrait
 		else
 		{
@@ -368,7 +364,6 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 			{
 				swapWidthAndHeight();
 			}
-			
 		}		
 	}
 
@@ -454,6 +449,7 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 	@Override
 	public void onDataPass(int oldmarkerid, int markerid)
 	{
+	Log.d(TAG, "OndataPass: " + oldmarkerid + " " + markerid);	
 		if (oldmarkerid != markerid)
 		{
 			Log.i(TAG, "Old and New : " + oldmarkerid + " ," + markerid);
@@ -487,7 +483,9 @@ public class MainActivity extends LifecycleLoggingActivity implements DataTransf
 		super.onResume();
 		if (!fragment.isAdded() && !STARTSCREEN_VISIBLE)
 		{
+			Log.i(TAG, "onResume : " + oldselectedmarker + " ," + selectedmarker);
 			addFragment(fragment, CURRENT_ROUTE);
+			
 		} else
 		{
 			addFragment(startupFragment, STARTSCREEN);

@@ -1,8 +1,11 @@
 package afr.iterson.mapper;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
@@ -22,6 +25,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 public class StartupFragment extends Fragment
 {
 	private String TAG = "afr.iterson.StartupFragment";
+	private static String videourl = "ULpfExrEjws";
 	DisplayImageOptions options;
 	private  int PADDING; 
 	private Context context;
@@ -75,18 +79,12 @@ public class StartupFragment extends Fragment
 				+ " km \n" 
 				+ getResources().getString(R.string.startpage_route2_subtitle));
 
-		
-		
-		
-		
 		textview1.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
 			public void onClick(View v)
 			{
 				ll_startupscreen.setVisibility(View.INVISIBLE);
-				//Fragment f = (PopupFragment) main.fragment;
-				//main.addFragment(f, main.ROUTE1);
 				main.CURRENT_ROUTE = main.ROUTE1;
 				main.STARTSCREEN_VISIBLE = false;
 				main.setupMapIfNeeded();;
@@ -99,8 +97,6 @@ public class StartupFragment extends Fragment
 			public void onClick(View v)
 			{
 				ll_startupscreen.setVisibility(View.INVISIBLE);
-//				Fragment f = (PopupFragment) main.fragment;
-//				main.addFragment(f, main.ROUTE2);
 				main.CURRENT_ROUTE = main.ROUTE2;
 				main.STARTSCREEN_VISIBLE = false;
 				main.setupMapIfNeeded();
@@ -113,7 +109,7 @@ public class StartupFragment extends Fragment
 			@Override
 			public void onClick(View v)
 			{
-				// TODO Auto-generated method stub
+				watchYoutubeVideo(videourl);
 			}
 		});
 		
@@ -166,4 +162,15 @@ public class StartupFragment extends Fragment
 		}
 	}
 
+	public  void watchYoutubeVideo(String id){
+	    try{
+	         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
+	         main.startActivity(intent);                 
+	         }catch (ActivityNotFoundException ex){
+	             Intent intent=new Intent(Intent.ACTION_VIEW, 
+	             Uri.parse("http://www.youtube.com/watch?v="+id));
+	             startActivity(intent);
+	         }
+	}
+	
 }
